@@ -2,6 +2,7 @@
 
 ![npm](https://img.shields.io/npm/v/cypress-msteams-reporter) ![GitHub](https://img.shields.io/github/license/maritome/cypress-msteams-reporter) ![npm](https://img.shields.io/npm/dm/cypress-msteams-reporter) ![CI](https://github.com/maritome/cypress-msteams-reporter/workflows/CI/badge.svg?branch=main)
 
+Project forked from [cypress-msteams-reporter](https://github.com/maritome/cypress-msteams-reporter) by Maria Tome
 ## Cypress Discord Reporter
 
 A Discord reporter of your test results.  
