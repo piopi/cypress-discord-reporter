@@ -2,7 +2,7 @@ require('dotenv').config()
 const { Webhook, MessageBuilder } = require('discord-webhook-node');
 async function sendWebhook(args) {
 
-	const hook = new Webhook("https://discord.com/api/webhooks/814251630463549491/t1SwqowFgTDXHOUQhpfWE-N9jT_ny5bkrlevmQS9MmKSig9CIqRRUjWnUODsZlDPajRl");
+	const hook = new Webhook(process.env.DISCORD_WEBHOOK_URL);
 	const embed = new MessageBuilder();
 	//console.log(args.image);
 

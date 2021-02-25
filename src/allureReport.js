@@ -38,9 +38,7 @@ async function readAllureReport(reportPath, testEnvPath) {
 		console.warn('Report is empty')
 		title = 'Test report is empty'
 		color = Color.BLACK
-		image = fs.existsSync('./assets/images/error.png')
-			? 'data:image/png;base64,' + imageToBase64('./assets/images/error.png')
-			: ''
+		image = 'https://raw.githubusercontent.com/piopi/cypress-discord-reporter/main/assets/images/error.png'
 		text = 'An error has occured and the test report is empty.'
 
 		return { appName, appVersion, color, title, image, text }
@@ -64,19 +62,19 @@ async function readAllureReport(reportPath, testEnvPath) {
 		title = `${failedTests.length} test case(s) failed`
 		color = Color.RED
 		image = 'https://raw.githubusercontent.com/maritome/cypress-msteams-reporter/main/assets/images/failed.png'
-		text = `Failed test case(s): <br/> ${failedTests
+		text = `Failed test case(s): \n ${failedTests
 			.map((failedTest) => failedTest.name)
-			.join('<br/>')}`
+			.join('\n')}`
 	} else if (brokenTests.length > 0) {
 		title =
 			brokenTests.length === 1
 				? `${brokenTests.length} test case is broken`
 				: `${brokenTests.length} test cases are broken`
 		color = Color.YELLOW
-		image = 'https://raw.githubusercontent.com/maritome/cypress-msteams-reporter/main/assets/images/broken.png'
-		text = `Broken test case(s): <br/> ${brokenTests
+		image = 'https://raw.githubusercontent.com/piopi/cypress-discord-reporter/main/assets/images/failed.png'
+		text = `Broken test case(s): \n ${brokenTests
 			.map((brokenTest) => brokenTest.name)
-			.join('<br/>')}`
+			.join('\n')}`
 	} else if (
 		passedTests.length > 0 &&
 		passedTests.length === totalTests - skippedTests.length

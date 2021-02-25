@@ -1,8 +1,13 @@
 # Discord-reporter
 
-![npm](https://img.shields.io/npm/v/cypress-msteams-reporter) ![GitHub](https://img.shields.io/github/license/maritome/cypress-msteams-reporter) ![npm](https://img.shields.io/npm/dm/cypress-msteams-reporter) ![CI](https://github.com/maritome/cypress-msteams-reporter/workflows/CI/badge.svg?branch=main)
+![npm](https://img.shields.io/npm/v/cypress-discord-reporter) ![GitHub](https://img.shields.io/github/license/maritome/cypress-discord-reporter)  
 
 Project forked from [cypress-msteams-reporter](https://github.com/maritome/cypress-msteams-reporter) by Maria Tome
+## Prerequisites
+
+- [allure-commandline](https://www.npmjs.com/package/allure-commandline)
+- [cypress-allure-plugin](https://www.npmjs.com/package/@shelex/cypress-allure-plugin) (or any other allure reporter)
+
 ## Cypress Discord Reporter
 
 A Discord reporter of your test results.  
@@ -26,23 +31,15 @@ How discord message looks like
 ## Installation
 
 ```
-npm install discord-reporter --save-dev
+npm install cypress-discord-reporter --save-dev
 ```
-
-## Prerequisites
-
-- [allure-commandline](https://www.npmjs.com/package/allure-commandline)
-- [cypress-allure-plugin](https://www.npmjs.com/package/@shelex/cypress-allure-plugin) (or any other allure reporter)
-
 ## Configuration
 
 Create an incoming webhook for the team channel where you want to get the report. Copy the WEBHOOK URL and add it to your .env file:
 
 ```
-MS_TEAMS_WEBHOOK_URL = 'yourWebhookUrl'
+DISCORD_WEBHOOK_URL = 'yourWebhookUrl'
 ```
-
-To add the images that you see in the above screenshots as part of your discord messages, copy the folder `assets/images` in the root of your project.
 
 To display in the discord message the name of the application under test and its version when the tests were executed, create a environment.properties file within your allure-results folder. In the file add:
 
