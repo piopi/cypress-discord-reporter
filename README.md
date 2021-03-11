@@ -2,7 +2,7 @@
 
 ![npm](https://img.shields.io/npm/v/cypress-discord-reporter) ![GitHub](https://img.shields.io/github/license/maritome/cypress-discord-reporter)  
 
-Project forked from [cypress-msteams-reporter](https://github.com/maritome/cypress-msteams-reporter) by Maria Tome
+
 ## Prerequisites
 
 - [allure-commandline](https://www.npmjs.com/package/allure-commandline)
@@ -67,3 +67,5 @@ Options:
 ```
 
 If the allure report is uploaded somewhere, provide the link using the option `--report-url`. A button 'Open Test Report' will be part of discord message. Onclick it, the allure test report will be opened.
+
+Project forked from [cypress-msteams-reporter](https://github.com/maritome/cypress-msteams-reporter) by Maria Tome
