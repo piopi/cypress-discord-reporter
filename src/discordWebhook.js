@@ -11,8 +11,14 @@ async function sendWebhook(args) {
 	}
 	else{
 		
-		throw new Error('Failed to send Discord message. Please enter the the Discord webhook url either with the argument --discordHook or in the .env file');
+		throw new Error('Failed to send Discord message. Please enter the Discord webhook url either with the argument --discordHook or in the .env file');
 	  
+	}
+	let appName="";
+	if (arg.appName){
+		appName=arg.appName;
+	}else if(process.env.APP_NAME){
+		appName=process.env.APP_NAME;
 	}
 	const embed = new MessageBuilder();
 
@@ -24,7 +30,7 @@ async function sendWebhook(args) {
 	if(args.url){
 		await embed.addField('Report URL:', args.url);
 	}
-	if(args.appName){
+	if(appName){
 		await embed.setDescription(`**Application:** ${args.appName} \n\n`+args.text);
 	}else{
 		await embed.setDescription(args.text);
@@ -32,5 +38,6 @@ async function sendWebhook(args) {
 
 			
 	hook.send(embed);
+	process.exitCode = args.testStats.failedTests.length;
 }
 module.exports = { sendWebhook }

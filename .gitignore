@@ -1,6 +1,13 @@
-node_modules
-cypress/screenshots
-cypress/videos
-allure-report
-allure-results
-.env
+#Ignore everything
+*
+
+/node_modules/
+
+!/src
+!/src/**
+!/.npmignore
+!/.gitignore
+!/.LICENSE
+!/package.json
+!/package-lock.json
+!/README.md
