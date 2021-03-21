@@ -3,10 +3,6 @@
 ![npm](https://img.shields.io/npm/v/cypress-discord-reporter) ![GitHub](https://img.shields.io/github/license/maritome/cypress-discord-reporter)  
 
 
-## Prerequisites
-
-- [allure-commandline](https://www.npmjs.com/package/allure-commandline)
-- [cypress-allure-plugin](https://www.npmjs.com/package/@shelex/cypress-allure-plugin) (or any other allure reporter)
 
 ## Cypress Discord Reporter
 
