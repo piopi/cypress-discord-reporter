@@ -15,8 +15,8 @@ async function sendWebhook(args) {
 	  
 	}
 	let appName="";
-	if (arg.appName){
-		appName=arg.appName;
+	if (args.appName){
+		appName=args.appName;
 	}else if(process.env.APP_NAME){
 		appName=process.env.APP_NAME;
 	}
